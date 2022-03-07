@@ -14,6 +14,10 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+            <img src="{{ asset('build/images/symfony-logo.svg') }}" alt="Symfony">
+            <br>
+            <img src="{{ source(asset('build/images/symfony-logo.svg'))|data_uri }}" alt="Symfony inlined">
+        {% endblock %}
     </body>
 </html>
