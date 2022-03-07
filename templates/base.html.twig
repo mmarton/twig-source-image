@@ -15,9 +15,16 @@
     </head>
     <body>
         {% block body %}
-            <img src="{{ asset('build/images/symfony-logo.svg') }}" alt="Symfony">
-            <br>
-            <img src="{{ source(asset('build/images/symfony-logo.svg'))|data_uri }}" alt="Symfony inlined">
+            <img src="{{ asset('build/images/symfony-logo.svg') }}" alt="Symfony"><br>
+            <img src="{{ source('symfony-logo.svg')|data_uri }}" alt="Symfony inlined 1"><br>
+            <img src="{{ source('images/symfony-logo.svg')|data_uri }}" alt="Symfony inlined 2"><br>
+            <img src="{{ source('build/images/symfony-logo.svg')|data_uri }}" alt="Symfony inlined 3"><br>
+
+            <img src="{{ source('symfony-logo.37a94574.svg')|data_uri }}" alt="Symfony inlined 4"><br>
+            <img src="{{ source('images/symfony-logo.37a94574.svg')|data_uri }}" alt="Symfony inlined 5"><br>
+            <img src="{{ source('build/images/symfony-logo.37a94574.svg')|data_uri }}" alt="Symfony inlined 6"><br>
+
+            <img src="{{ source(asset('build/images/symfony-logo.svg'))|data_uri }}" alt="Symfony inlined 7">
         {% endblock %}
     </body>
 </html>
